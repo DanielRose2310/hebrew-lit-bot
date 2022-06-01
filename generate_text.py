@@ -19,7 +19,7 @@ def generate_text(model, state_size=2):
 
         next_word = random.choice(model[key])
         if ')' in next_word and not '(' in ' '.join(text):
-            next_word = random.choice(model[key])
+            get_new_starter()
         text.append(next_word)
         i += 1
         if sent_good(' '.join(text)):
