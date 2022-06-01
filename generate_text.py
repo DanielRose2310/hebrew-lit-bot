@@ -3,7 +3,7 @@ from string import punctuation
 import re 
 from validate_sent import sent_good
 
-def generate_text(model, state_size=2, min_length=20):
+def generate_text(model, state_size=2, min_length=10):
     '''
     Consume a Markov chain model (make sure to specify the <state_size> used)
     to generate text that is at least <min_length> size long.
