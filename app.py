@@ -12,7 +12,7 @@ def hello_world(name):
     if name in names or name is None:
         model_from_file = open("models/"+name+".pkl", "rb")
         model_from_file = pickle.load(model_from_file)
-        return jsonify({'res':generate_text(model_from_file)})
+        return jsonify({name:generate_text(model_from_file)})
     else:
         return "Invalid param!"
     
