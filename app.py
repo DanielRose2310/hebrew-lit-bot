@@ -5,7 +5,7 @@ import pickle
 names = ['berdichevsky','berl','biyalik','brenner','frischmann','laufbahn']
 @app.route('/<name>') 
 def hello_world(name):
-    if name in names:
+    if name in names or name is None:
         model_from_file = open("models/"+name+".pkl", "rb")
         model_from_file = pickle.load(model_from_file)
         return generate_text(model_from_file)
