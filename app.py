@@ -1,5 +1,7 @@
 from flask import Flask
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 from generate_text import generate_text
 import pickle
 names = ['berdichevsky','berl','biyalik','brenner','frischmann','laufbahn']
