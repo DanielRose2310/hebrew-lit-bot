@@ -1,5 +1,3 @@
-import random
-
 from validate_sent import sent_good
 
 def get_new_starter(model):
